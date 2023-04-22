@@ -27,22 +27,7 @@
                 font-weight: bold;
                 border: 2px solid #00848c;
             }
-            .message-error{
-                background-color: #ff0000 !important;
-                border: none;
-                color: #fff;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-                border-radius: 10px;
-                font-weight: bold;
-                border: 2px solid #ff0000;
-            }
-              .button{
+            .button{
                 background-color: #00848c !important;
                 border: none;
                 color: #fff;
@@ -66,23 +51,23 @@
     </head>
     <body class="antialiased">
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-                  <div class="max-w-7xl mx-auto p-6 lg:p-8">
+
+            <div class="max-w-7xl mx-auto p-6 lg:p-8">
                 <div class="flex justify-center">
                     <img src="http://aisolutions.tec.br/wp-content/uploads/sites/2/2019/04/logo.png" alt="" srcset="">
                 </div>
                 <div class=" mt-16">
                     <div class="text-center">
-                        <h1 class="text-4xl font-bold text-gray-800 dark:text-white">Upload de Arquivos</h1>
-                        <p class="mt-2 text-gray-600 dark:text-gray-400">Faça o upload de arquivos</p>
+                        <h1 class="text-4xl font-bold text-gray-800 dark:text-white">A o Iniciar a fila</h1>
+                        <p class="mt-2 text-gray-600 dark:text-gray-400">Todos os registros em fila serao adicionados ao banco de dados</p>
                     </div>
                 <div class="mt-16 text-center">
-                    <form method="POST" action="{{ route('upload') }}" enctype="multipart/form-data"
-                          class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+
+                    <form method="POST" action="{{ route('worker') }}" class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                         @csrf
-                        <input type="file" name="doc"/>
-                        <br>
-                        <button type="submit" class="button mt-16">Upload</button>
+                        <button type="submit" class="button" > Iniciar Fila</button>
                     </form>
+
                 </div>
                 <div class="mt-16 text-center">
                     @if (isset($message))
@@ -90,16 +75,8 @@
                             {{ $message }}
                         </div>
                     @endif
-                    @if ($errors->any())
-                    <div class="message-error">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
                 </div>
+
                 <div class="flex justify-center mt-16">
 
                     <a href="https://github.com/felipe-machado09" class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">

@@ -17,6 +17,9 @@ Este teste utiliza PHP 8.1, Laravel 10 e um banco de dados SQLite simples.
 
 Crítica das Migrations e Seeders: Aponte problemas, se houver, e solucione; Implemente melhorias;
 
+1 - no arquivo de seeder nao estava sendo chamado 
+2 - removi a o schema nao era necessario visto que iriamos apenas um exemplo e nao iriamos usar a tabela de usuarios etc...
+
 ### Segunda Tarefa:
 
 Crie a estrutura completa de uma tela que permita adicionar a importação do arquivo `storage/data/2023-03-28.json`, para a tabela `documents`. onde cada registro representado neste arquivo seja adicionado a uma fila para importação.
