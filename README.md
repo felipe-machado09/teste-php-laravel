@@ -17,8 +17,8 @@ Este teste utiliza PHP 8.1, Laravel 10 e um banco de dados SQLite simples.
 
 Crítica das Migrations e Seeders: Aponte problemas, se houver, e solucione; Implemente melhorias;
 
-1 - no arquivo de seeder nao estava sendo chamado 
-2 - removi a o schema nao era necessario visto que iriamos apenas um exemplo e nao iriamos usar a tabela de usuarios etc...
+1. no arquivo de seeder não estava sendo chamado 
+2. removi a o schema não era necessario visto que iriamos apenas um exemplo e não iriamos usar a tabela de usuarios etc...
 
 ### Segunda Tarefa:
 
